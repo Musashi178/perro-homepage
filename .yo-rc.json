@@ -1,0 +1,15 @@
+{
+  "generator-baumeister": {
+    "promptValues": {
+      "projectType": "staticSite",
+      "boilerplateAmount": "little",
+      "license": "All rights reserved",
+      "authorName": "Marco Spatz",
+      "authorUrl": "",
+      "initialVersion": "0.0.0",
+      "additionalInfo": false,
+      "banners": false,
+      "addDistToVersionControl": false
+    }
+  }
+}
