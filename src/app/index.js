@@ -25,6 +25,11 @@ $(async () => {
 	consoleErrorFix();
 	ieViewportFix();
 
-	console.log('YaY, my first ES6-Module !!!!');
-});
+	const offset = 56;
 
+	$('.navbar li a').click(function (event) {
+		event.preventDefault();
+		$($(this).attr('href'))[0].scrollIntoView();
+		scrollBy(0, -offset);
+	});
+});
