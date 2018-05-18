@@ -19,3 +19,4 @@ coverage
 *.sublime-project
 *.sublime-workspace
 .vscode
+yarn-error.log
