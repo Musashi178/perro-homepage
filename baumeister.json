@@ -18,8 +18,12 @@
   "generateBanners": false,
   "cacheBusting": true,
   "vendor": {
-    "bundleCSS": [],
-    "includeStaticFiles": []
+    "bundleCSS": [
+      "lightbox2/dist/css/lightbox.css"
+    ],
+    "includeStaticFiles": [
+      "lightbox2/dist/images/**"
+    ]
   },
   "webpack": {
     "DefinePlugin": {

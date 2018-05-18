@@ -67,6 +67,7 @@
     "bootstrap": "^4.0.0",
     "core-js": "^2.5.4",
     "jquery": "^3.3.1",
+    "lightbox2": "^2.10.0",
     "popper.js": "^1.14.1",
     "promise-polyfill": "^7.1.1"
   },

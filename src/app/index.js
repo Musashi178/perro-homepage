@@ -9,6 +9,9 @@ import 'bootstrap';
 // import 'bootstrap/js/dist/util';
 // import 'bootstrap/js/dist/dropdown';
 
+// Import lightbox2
+import 'lightbox2';
+
 // Import polyfills
 import {applyPolyfills} from './base/polyfills';
 

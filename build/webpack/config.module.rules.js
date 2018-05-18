@@ -68,5 +68,18 @@ export const rules = [
 				}
 			}
 		]
+	},
+	{
+		test: /\.(png|gif|jpe?g)(\?v=\d+\.\d+\.\d+)?$/,
+		use: [
+			{
+				loader: 'file-loader',
+				options: {
+					outputPath: '../',
+					useRelativePath: true,
+					name: '[name].[ext]'
+				}
+			}
+		]
 	}
 ];
