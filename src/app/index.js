@@ -18,6 +18,7 @@ import {applyPolyfills} from './base/polyfills';
 // Import methods from the base module
 import {consoleErrorFix, ieViewportFix} from './base/base';
 
+import {scrollIntoViewFix} from './base/scroll-into-view-fix';
 // Import our Sass entrypoint to create the CSS app bundle
 import '../assets/scss/index.scss';
 
@@ -28,11 +29,5 @@ $(async () => {
 	consoleErrorFix();
 	ieViewportFix();
 
-	const offset = 56;
-
-	$('.navbar li a').click(function (event) {
-		event.preventDefault();
-		$($(this).attr('href'))[0].scrollIntoView();
-		scrollBy(0, -offset);
-	});
+	scrollIntoViewFix();
 });
