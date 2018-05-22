@@ -9,6 +9,7 @@
 // Own modules
 // --------------------------------------------------
 // @import "theme/testResponsiveHelpers"; // debug
+@import "theme/handwritten";
 @import "theme/navigation";
 @import "theme/footer";
 
@@ -18,7 +19,3 @@
 // separate files like the examples above when you exceed a few hundred lines
 // of code. Otherwise it will definitely have a negative impact on
 // maintainability.
-
-.handwritten {
-	font-family: 'Dancing Script', cursive;
-}
