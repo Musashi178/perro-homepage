@@ -1,7 +1,6 @@
 .navbar {
 	position: -webkit-sticky;
 	position: sticky;
-
 	background-color: #5d4037 !important;
 
 	.nav-item {
@@ -9,8 +8,8 @@
 
 		.active {
 			border-style: solid;
-			border-width: 0px 0px medium 0px;
-			border-color: #4CAF50;
+			border-bottom-width: medium;
+			border-color: #4caf50;
 		}
 	}
 }

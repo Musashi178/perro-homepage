@@ -20,3 +20,7 @@ coverage
 *.sublime-workspace
 .vscode
 yarn-error.log
+images/close.png
+images/loading.gif
+images/next.png
+images/prev.png
