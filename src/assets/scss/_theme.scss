@@ -5,9 +5,11 @@
 @import "theme/scaffolding";
 @import "theme/alerts";
 @import "theme/container";
+@import "theme/cards";
 // Own modules
 // --------------------------------------------------
 // @import "theme/testResponsiveHelpers"; // debug
+@import "theme/navigation";
 @import "theme/footer";
 
 // Important note //
@@ -16,3 +18,7 @@
 // separate files like the examples above when you exceed a few hundred lines
 // of code. Otherwise it will definitely have a negative impact on
 // maintainability.
+
+.handwritten {
+	font-family: 'Dancing Script', cursive;
+}
