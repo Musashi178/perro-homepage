@@ -3,11 +3,11 @@
  */
 
 // Import the whole Bootstrap JS bundle
-import 'bootstrap';
+// import 'bootstrap';
 
 // Or import only what you need to keep your vendor bundle small
-// import 'bootstrap/js/dist/util';
-// import 'bootstrap/js/dist/dropdown';
+import 'bootstrap/js/src/util';
+import 'bootstrap/js/src/scrollspy';
 
 // Import lightbox2
 import 'lightbox2';
