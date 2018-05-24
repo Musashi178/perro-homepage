@@ -2,59 +2,40 @@
 // Footer
 // --------------------------------------------------
 // Custom footer styles
-
 // Global variables
 //
-
-$footer-height: 30px;
-$footer-text-margin: 20px;
-
-// Global mixins
+$footer-height: 70px; // Global mixins
 //
-
 // Called in _scaffolding.scss
-@mixin footer-htmlProps {
-	position: relative;
+@mixin footer-html-props {
 	min-height: 100%;
+	position: relative;
 }
-
 // Called in _scaffolding.scss
-@mixin footer-bodyProps {
+@mixin footer-body-props {
 	// Margin bottom by footer height
-	margin-bottom: ($footer-height - $footer-text-margin);
+	margin-bottom: ($footer-height);
 }
-
 // Module wrapper
 
 .footer {
-
-	// Local variables
-	//
-	// Which are meant to be used only in this module. »Global« variables are stored
-	// in /src/assets/scss/_variables.scss
-	$footer-bg: #f5f5f5;
-
-	// Local mixins
-	//
-	// Which are meant to be used only in this module. »Global« mixins are stored
-	// in /src/assets/scss/theme/_mixins.scss
-
-	// Styles
-	//
-	position: absolute;
+	background-color: #5d4037;
+	color: white;
 	bottom: 0;
+	height: $footer-height;
+	line-height: $footer-height - 20px;
+	position: absolute;
 	width: 100%;
 
-	// Set the fixed height of the footer here
-	height: $footer-height;
-	background-color: $footer-bg;
-
-	> .container {
-		padding-right: 15px;
-		padding-left: 15px;
+	a {
+		color: white;
 	}
 
-	.footer-text {
-		margin: $footer-text-margin 0;
+	> .container-fluid {
+		background-color: inherit;
+		// margin-left: 0;
+		// margin-right: 0;
+		padding-left: 15px;
+		padding-right: 15px;
 	}
 }
