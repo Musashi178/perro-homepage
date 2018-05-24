@@ -21,6 +21,8 @@ export function scrollIntoViewFix() {
 				} else {
 					window.location.hash = hash;
 				}
+
+				$('.navbar-collapse').collapse('hide');
 			});
 
 		} // End if
