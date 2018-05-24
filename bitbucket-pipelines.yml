@@ -13,3 +13,9 @@ pipelines:
         script: # Modify the commands below to build your repository.
           - npm install
           - npm build
+    - step:
+      name: Deploy to 1&1
+      deployment: production   # can be test, staging or production
+      trigger: manual  # uncomment to make manual deployment
+      script:
+        - echo "Deploying to 1&1"
