@@ -8,6 +8,7 @@
 // Or import only what you need to keep your vendor bundle small
 import 'bootstrap/js/src/util';
 import 'bootstrap/js/src/scrollspy';
+import 'bootstrap/js/src/collapse';
 
 // Import lightbox2
 import 'lightbox2';
