@@ -2,11 +2,10 @@
   "name": "perro-homepage",
   "title": "Perro Homepage",
   "description": "Homepage für die Perro Zucht von Galls",
-  "homepage": "",
+  "homepage": "https://perro.bayern/",
   "author": {
     "name": "Marco Spatz",
-    "email": "",
-    "url": ""
+    "email": "marco.spatz@gmail.com"
   },
   "engines": {
     "node": ">=8.6"
@@ -15,9 +14,6 @@
   "version": "0.0.0",
   "repository": {
     "type": "",
-    "url": ""
-  },
-  "bugs": {
     "url": ""
   },
   "private": true,

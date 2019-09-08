@@ -48,7 +48,7 @@ export function consoleErrorFix() {
     'trace',
     'warn'
   ];
-  let length = methods.length;
+  let { length } = methods;
   const console = window.console || {};
 
   while (length--) {

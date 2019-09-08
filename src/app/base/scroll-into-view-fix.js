@@ -1,33 +1,35 @@
 export function scrollIntoViewFix() {
+  const navbarOffset = 70;
 
-	const navbarOffset = 70;
+  const scrollIntoView = function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== '') {
+      // Prevent default anchor click behavior
+      event.preventDefault();
 
-	const scrollIntoView = function (event) {
-		// Make sure this.hash has a value before overriding default behavior
-		if (this.hash !== '') {
-			// Prevent default anchor click behavior
-			event.preventDefault();
+      // Store hash
+      const { hash } = this;
 
-			// Store hash
-			const hash = this.hash;
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate(
+        {
+          scrollTop: $(hash).offset().top - navbarOffset
+        },
+        800,
+        () => {
+          if (history.pushState) {
+            history.pushState(null, null, hash);
+          } else {
+            window.location.hash = hash;
+          }
 
-			// Using jQuery's animate() method to add smooth page scroll
-			// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-			$('html, body').animate({
-				scrollTop: $(hash).offset().top - navbarOffset
-			}, 800, () => {
-				if (history.pushState) {
-					history.pushState(null, null, hash);
-				} else {
-					window.location.hash = hash;
-				}
+          $('.navbar-collapse').collapse('hide');
+        }
+      );
+    } // End if
+  };
 
-				$('.navbar-collapse').collapse('hide');
-			});
-
-		} // End if
-	};
-
-	$('.navbar li a').click(scrollIntoView);
-	$('.navbar .navbar-brand').click(scrollIntoView);
+  $('.navbar li a').click(scrollIntoView);
+  $('.navbar .navbar-brand').click(scrollIntoView);
 }
