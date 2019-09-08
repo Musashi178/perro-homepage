@@ -1,13 +1,13 @@
 .navbar {
-	position: -webkit-sticky;
-	position: sticky;
-	background-color: #5d4037 !important;
+  position: -webkit-sticky;
+  position: sticky;
+  background-color: #5d4037 !important;
 
-	.nav-item {
-		font-size-adjust: auto;
+  .nav-item {
+    font-size-adjust: auto;
 
-		.active {
-			border-bottom: medium solid #4caf50;
-		}
-	}
+    .active {
+      border-bottom: medium solid #4caf50;
+    }
+  }
 }

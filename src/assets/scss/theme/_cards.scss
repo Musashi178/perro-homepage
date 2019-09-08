@@ -1,18 +1,18 @@
 .card {
-	margin-top: 2rem;
-	-webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
-	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
-	border: 0;
-	border-radius: 0.25em;
+  margin-top: 2rem;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  border: 0;
+  border-radius: 0.25em;
 
-	.card-header {
-		border-top-left-radius: 0.25em;
-		border-top-right-radius: 0.25em;
-		background-color: $primary;
-		color: $white;
+  .card-header {
+    border-top-left-radius: 0.25em;
+    border-top-right-radius: 0.25em;
+    background-color: $primary;
+    color: $white;
 
-		.card-title {
-			margin-bottom: 0;
-		}
-	}
+    .card-title {
+      margin-bottom: 0;
+    }
+  }
 }

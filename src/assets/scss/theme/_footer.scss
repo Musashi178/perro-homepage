@@ -8,34 +8,34 @@ $footer-height: 70px; // Global mixins
 //
 // Called in _scaffolding.scss
 @mixin footer-html-props {
-	min-height: 100%;
-	position: relative;
+  min-height: 100%;
+  position: relative;
 }
 // Called in _scaffolding.scss
 @mixin footer-body-props {
-	// Margin bottom by footer height
-	margin-bottom: ($footer-height);
+  // Margin bottom by footer height
+  margin-bottom: ($footer-height);
 }
 // Module wrapper
 
 .footer {
-	background-color: #5d4037;
-	color: white;
-	bottom: 0;
-	height: $footer-height;
-	line-height: $footer-height - 20px;
-	position: absolute;
-	width: 100%;
+  background-color: #5d4037;
+  color: white;
+  bottom: 0;
+  height: $footer-height;
+  line-height: $footer-height - 20px;
+  position: absolute;
+  width: 100%;
 
-	a {
-		color: white;
-	}
+  a {
+    color: white;
+  }
 
-	> .container-fluid {
-		background-color: inherit;
-		// margin-left: 0;
-		// margin-right: 0;
-		padding-left: 15px;
-		padding-right: 15px;
-	}
+  > .container-fluid {
+    background-color: inherit;
+    // margin-left: 0;
+    // margin-right: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }

@@ -1,4 +1,4 @@
-@import "footer";
+@import 'footer';
 //
 // Scaffolding
 // --------------------------------------------------
@@ -9,25 +9,35 @@
 // Fix viewport issues with IE 10.
 // See http://getbootstrap.com/getting-started/#support-ie10-width
 // stylelint-disable at-rule-empty-line-before
-@-webkit-viewport { width: device-width; }
-@-moz-viewport { width: device-width; }
-@-ms-viewport { width: device-width; }
-@-o-viewport { width: device-width; }
-@viewport { width: device-width; }
+@-webkit-viewport {
+  width: device-width;
+}
+@-moz-viewport {
+  width: device-width;
+}
+@-ms-viewport {
+  width: device-width;
+}
+@-o-viewport {
+  width: device-width;
+}
+@viewport {
+  width: device-width;
+}
 // stylelint-enable
 
 html {
-	// Get properties related to sticky footer. See _footer.scss
-	@include footer-html-props;
+  // Get properties related to sticky footer. See _footer.scss
+  @include footer-html-props;
 }
 
 body {
-	overflow-y: scroll;
-	padding-bottom: 30px;
-	// Optimize legibility on Retina displays
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	// Get properties related to sticky footer. See _footer.scss
-	@include footer-body-props;
+  overflow-y: scroll;
+  padding-bottom: 30px;
+  // Optimize legibility on Retina displays
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  // Get properties related to sticky footer. See _footer.scss
+  @include footer-body-props;
 }
