@@ -28,35 +28,35 @@
     "build:serve": "npm-run-all --parallel build:serve:*",
     "build:serve:dist": "serve dist",
     "build:serve:open": "opn http://localhost:5000",
-    "build:analyze": "npm run webpack:stats --silent && webpack-bundle-analyzer ./.webpack-stats.json ./dist -s parsed",
-    "pretest": "npm run eslint --silent",
+    "build:analyze": "yarn run --silent webpack:stats && webpack-bundle-analyzer ./.webpack-stats.json ./dist -s parsed",
+    "pretest": "yarn run --silent eslint ",
     "test": "cross-env NODE_ENV=test jest --coverage",
-    "test:watch": "npm run test:coverage -- --watch",
+    "test:watch": "yarn run test:coverage -- --watch",
     "test:coverage": "cross-env NODE_ENV=test jest --coverage",
     "eslint": "eslint --ext .jsx,.js --cache build src",
-    "eslint:fix": "npm run eslint --silent -- --fix",
-    "eslint:watch": "onchange \"src/**/*.js\" \"src/**/*.jsx\" \"build/**/*.js\" -- onerror \"npm run eslint --silent\" -t \"Linting error(s)\"",
+    "eslint:fix": "yarn run --silent eslint -- --fix",
+    "eslint:watch": "onchange \"src/**/*.js\" \"src/**/*.jsx\" \"build/**/*.js\" -- onerror \"yarn run --silent eslint \" -t \"Linting error(s)\"",
     "stylelint": "stylelint \"src/assets/scss/**/*.scss\"",
-    "stylelint:fix": "npm run stylelint --silent -- --fix",
-    "stylelint:watch": "onchange \"src/assets/scss/**/*.scss\" -- onerror \"npm run stylelint --silent\" -t \"Linting error(s)\"",
-    "release": "npm run build --silent && standard-version --tag-prefix",
-    "release:patch": "npm run release --silent -- --release-as patch",
-    "release:minor": "npm run release --silent -- --release-as minor",
-    "release:major": "npm run release --silent -- --release-as major",
+    "stylelint:fix": "yarn run --silent stylelint -- --fix",
+    "stylelint:watch": "onchange \"src/assets/scss/**/*.scss\" -- onerror \"yarn run --silent stylelint \" -t \"Linting error(s)\"",
+    "release": "yarn run --silent build && standard-version --tag-prefix",
+    "release:patch": "yarn run --silent release -- --release-as patch",
+    "release:minor": "yarn run --silent release -- --release-as minor",
+    "release:major": "yarn run --silent release -- --release-as major",
     "webpack": "cross-env NODE_ENV=production webpack --config build/webpack.config.babel.js --hide-modules --progress",
     "webpack:dev": "cross-env NODE_ENV=development webpack --config build/webpack.config.babel.js --hide-modules --progress",
     "webpack:server": "cross-env NODE_ENV=development webpack-dev-server --config build/webpack.config.babel.js --open --host 0.0.0.0",
     "webpack:stats": "cross-env NODE_ENV=production webpack --config build/webpack.config.babel.js --profile --json > ./.webpack-stats.json",
     "handlebars": "babel-node build/handlebars.js",
-    "handlebars:watch": "onchange \"src/**/*.hbs\" \"src/handlebars/helpers/*.js\" -- onerror \"npm run handlebars --silent\" -t \"Handlebars build failed\"",
+    "handlebars:watch": "onchange \"src/**/*.hbs\" \"src/handlebars/helpers/*.js\" -- onerror \"yarn run --silent handlebars\" -t \"Handlebars build failed\"",
     "clean": "del .webpack-assets.json dist",
     "clean:dev": "del .webpack-assets.json server",
     "tasks": "ntl -d -o",
-    "postinstall": "chalk -t '{green Installed Baumeister successfully.\n{white Run} {yellow npm run tasks} {white to list and run the most importants npm scripts.}}'",
+    "postinstall": "chalk -t '{green Installed Baumeister successfully.\n{white Run} {yellow yarn run tasks} {white to list and run the most importants yarn scripts.}}'",
     "prettier": "prettier",
-    "prettier:write": "npm run prettier --silent -- --write",
-    "prettier:write:all": "npm run prettier --silent -- --write \"{{src,build}/**/*.{js,json,scss},./*.{js,json}}\"",
-    "prettier:check:all": "npm run prettier --silent -- --check \"{{src,build}/**/*.{js,json,scss},./*.{js,json}}\""
+    "prettier:write": "yarn run --silent prettier -- --write",
+    "prettier:write:all": "yarn run --silent prettier -- --write \"{{src,build}/**/*.{js,json,scss},./*.{js,json}}\"",
+    "prettier:check:all": "yarn run --silent prettier -- --check \"{{src,build}/**/*.{js,json,scss},./*.{js,json}}\""
   },
   "ntl": {
     "descriptions": {
@@ -326,13 +326,13 @@
   },
   "husky": {
     "hooks": {
-      "post-merge": "npm install",
+      "post-merge": "yarn install",
       "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
     "*.{js,json,scss}": [
-      "npm run prettier:write",
+      "yarn run prettier:write",
       "git add"
     ]
   }
