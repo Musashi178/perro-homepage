@@ -1,20 +1,26 @@
 import path from 'path';
 import globby from 'globby';
-import {settings} from '../config';
+import { settings, userSettings } from '../config';
 
-const configFile = require('../../baumeister.json');
+const { config: userConfig } = userSettings;
 
 export const entry = {
-	app: `${path.join(__dirname, '../../', settings.sources.app)}index.js`,
-	...getVendorCSS()
+  app: [
+    ...getVendorCSS(),
+    `${path.join(__dirname, '../../', settings.sources.app)}index.js`
+  ]
 };
 
 function getVendorCSS() {
-	// Return flattened array of resolved globs from baumeister.json
-	const vendorCSS = [].concat(...configFile.vendor.bundleCSS.map(glob => globby.sync(`./node_modules/${glob}`)));
-	if (!vendorCSS.length) {
-		return false;
-	}
-	return {vendor: vendorCSS};
-}
+  // Return flattened array of resolved globs from Baumeister user config.
+  const vendorCSS = [].concat(
+    ...userConfig.vendor.bundleCSS.map(glob =>
+      globby.sync(`./node_modules/${glob}`)
+    )
+  );
+  if (!vendorCSS.length) {
+    return [];
+  }
 
+  return vendorCSS;
+}

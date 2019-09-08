@@ -14,21 +14,21 @@ import 'bootstrap/js/src/collapse';
 import 'lightbox2';
 
 // Import polyfills
-import {applyPolyfills} from './base/polyfills';
+import { applyPolyfills } from './base/polyfills';
 
 // Import methods from the base module
-import {consoleErrorFix, ieViewportFix} from './base/base';
+import { consoleErrorFix, ieViewportFix } from './base/base';
 
-import {scrollIntoViewFix} from './base/scroll-into-view-fix';
+import { scrollIntoViewFix } from './base/scroll-into-view-fix';
 // Import our Sass entrypoint to create the CSS app bundle
 import '../assets/scss/index.scss';
 
 $(async () => {
-	// Wait with further execution until needed polyfills are loaded.
-	await applyPolyfills();
+  // Wait with further execution until needed polyfills are loaded.
+  await applyPolyfills();
 
-	consoleErrorFix();
-	ieViewportFix();
+  consoleErrorFix();
+  ieViewportFix();
 
-	scrollIntoViewFix();
+  scrollIntoViewFix();
 });

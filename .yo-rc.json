@@ -2,7 +2,7 @@
   "generator-baumeister": {
     "promptValues": {
       "projectType": "staticSite",
-      "boilerplateAmount": "little",
+      "boilerplateAmount": "minimum",
       "license": "All rights reserved",
       "authorName": "Marco Spatz",
       "authorUrl": "",
