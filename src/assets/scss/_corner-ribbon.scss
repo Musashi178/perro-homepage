@@ -1,0 +1,18 @@
+.corner-ribbon {
+  width: 400px;
+  position: absolute;
+  top: 75px;
+  left: -100px;
+  text-align: center;
+  line-height: 75px;
+  letter-spacing: 1px;
+  font-size: 1.75em;
+  z-index: 1;
+  color: #212529;
+  background: burlywood;
+  transform: rotate(-45deg);
+  opacity: 0.7;
+  -webkit-transform: rotate(-45deg);
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
+  // box-shadow: 60px -16px rgba(0,0,0,.3);
+}
